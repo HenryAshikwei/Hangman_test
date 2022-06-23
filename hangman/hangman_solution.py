@@ -138,15 +138,15 @@ def play_game(word_list):
             game.ask_letter()
         elif game.num_lives > 0 and '_' not in game.word_guessed:
             print("Congratulations! You have won!")
-            print("The word was", '' .join(game.word))
+            print(f"The word was, {game.word}")
             break
         elif game.num_lives == 0:
             print("You have run out of lives")
-            print("The word was," ''.join(game.word))
+            print(f"The word was, {game.word}")
             break
         pass
 
 if __name__ == '__main__':
-    word_list = ['apple', 'banana', 'orange', 'pear', 'strawberry', 'watermelon']
+    word_list = ['apple', 'banana', 'orange', 'pear', 'strawberry', 'watermelon', 'Volkswagen', 'Keyboard']
     play_game(word_list)
 # %%
