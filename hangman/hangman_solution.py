@@ -56,7 +56,8 @@ hangman_list = [
 """      _______
      |/      |
      |     (._.)
-     |      
+     |       +
+     |       
      |       
      |      
      |
@@ -65,7 +66,8 @@ hangman_list = [
         H A _ _ _ _ _""",
 """      _______
      |/      |
-     |      
+     |       +
+     |
      |      
      |       
      |      
@@ -74,9 +76,13 @@ hangman_list = [
     
         H _ _ _ _ _"""]
 
+name = input("Please Enter your name: ")
 
-print("Welcome to Hangman")
 
+
+print("Welcome to Hangman," , name )
+
+print("Try to guess the word!")
 class Hangman:
    
     def __init__(self, word_list, num_lives=5):
@@ -137,7 +143,7 @@ def play_game(word_list):
         if game.num_lives > 0 and '_' in game.word_guessed:
             game.ask_letter()
         elif game.num_lives > 0 and '_' not in game.word_guessed:
-            print("Congratulations! You have won!")
+            print("Congratulations! You won!")
             print(f"The word was, {game.word}")
             break
         elif game.num_lives == 0:
