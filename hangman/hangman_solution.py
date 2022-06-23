@@ -95,7 +95,6 @@ class Hangman:
         print("The mystery word has", len(self.word), "characters")
         print(self.word_guessed)
         print("You have", num_lives, "lives!")
-        pass
 
     def check_letter(self, letter) -> None:
 
@@ -106,7 +105,6 @@ class Hangman:
                     self.num_letters -= 1
                     print("Nice!", letter, "is in the word!")
                     self.list_letters.append(letter.lower())
-                    continue
                 else:
                     continue
             print(self.word_guessed)
@@ -116,7 +114,6 @@ class Hangman:
             print("Sorry" , letter , "is not in the word")
             print("You have", self.num_lives, "lives left")
             print(hangman_list[self.num_lives])
-        pass
 
     def ask_letter(self):
 
@@ -130,11 +127,9 @@ class Hangman:
                     print(letter, "was a ready tried")
                 else:
                     self.check_letter(letter)
-                pass
             else:
                 print("Please enter a character")
             break
-        pass
 
 def play_game(word_list):
     game = Hangman(word_list, num_lives=5)
@@ -150,7 +145,6 @@ def play_game(word_list):
             print("You have run out of lives")
             print(f"The word was, {game.word}")
             break
-        pass
 
 if __name__ == '__main__':
     word_list = ['apple', 'banana', 'orange', 'pear', 'strawberry', 'watermelon', 'Volkswagen', 'Keyboard']
